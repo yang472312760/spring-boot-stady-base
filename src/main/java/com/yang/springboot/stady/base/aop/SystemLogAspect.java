@@ -1,11 +1,11 @@
 package com.yang.springboot.stady.base.aop;
 
-import com.bingo.framework.base.annotation.SystemLog;
-import com.bingo.framework.base.enums.system.LogType;
-import com.bingo.framework.base.enums.system.OperateType;
-import com.bingo.framework.base.model.system.CommonResult;
-import com.bingo.framework.base.model.system.UserLog;
-import com.bingo.framework.base.service.userlog.IUserLogService;
+import com.yang.springboot.stady.base.annotation.SystemLog;
+import com.yang.springboot.stady.base.enums.system.LogType;
+import com.yang.springboot.stady.base.enums.system.OperateType;
+import com.yang.springboot.stady.base.model.system.CommonResult;
+import com.yang.springboot.stady.base.model.system.UserLog;
+import com.yang.springboot.stady.base.service.userlog.IUserLogService;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.util.Date;
@@ -58,7 +58,7 @@ public class SystemLogAspect {
     @Autowired
     private IUserLogService iUserLogService;
 
-    @AfterReturning(pointcut = "execution (* com.bingo.framework..controller.*Controller.*(..))", returning = "result")
+    @AfterReturning(pointcut = "execution (* com.yang.springboot..controller.*Controller.*(..))", returning = "result")
     public void after(JoinPoint joinPoint, final CommonResult result) {
         SystemLog systemLog = getAnnotationFromJoinPoint(joinPoint);
         if (systemLog != null) {

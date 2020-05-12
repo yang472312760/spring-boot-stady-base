@@ -1,7 +1,7 @@
 package com.yang.springboot.stady.base.annotation;
 
-import com.bingo.framework.base.enums.system.LogType;
-import com.bingo.framework.base.enums.system.OperateType;
+import com.yang.springboot.stady.base.enums.system.LogType;
+import com.yang.springboot.stady.base.enums.system.OperateType;
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
